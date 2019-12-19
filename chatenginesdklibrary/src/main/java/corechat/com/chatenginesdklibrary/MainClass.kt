@@ -4,11 +4,13 @@ import android.content.Context
 
 class MainClass {
 
-    companion object{
-        fun printMessage(context : Context, msg : String, view: CC_CustomTextView){
+    constructor(context: Context)
+
+//    companion object{
+        fun printMessage(msg : String, view: CC_CustomTextView){
             view.init()
             view.text = msg
         }
-    }
+//    }
 
 }
