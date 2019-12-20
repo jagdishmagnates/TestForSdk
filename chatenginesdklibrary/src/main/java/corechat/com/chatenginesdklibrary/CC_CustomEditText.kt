@@ -4,7 +4,6 @@ import android.content.Context
 import android.graphics.Typeface
 import android.util.AttributeSet
 import android.widget.EditText
-import corechat.com.chatenginesdklibrary.Utils.SdkPreferencesManager
 
 class CC_CustomEditText : EditText {
 
