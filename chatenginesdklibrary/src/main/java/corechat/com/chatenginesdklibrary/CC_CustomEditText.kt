@@ -7,19 +7,13 @@ import android.widget.EditText
 
 class CC_CustomEditText : EditText {
 
-    constructor(context: Context) : super(context) {
-        init()
-    }
+    constructor(context: Context) : super(context)
 
     constructor(context: Context, attrs: AttributeSet?) :
-            super(context, attrs) {
-        init()
-    }
+            super(context, attrs)
 
     constructor(context: Context, attrs: AttributeSet?, defStyleAttr: Int) :
-            super(context, attrs, defStyleAttr) {
-        init()
-    }
+            super(context, attrs, defStyleAttr)
 
     fun init() {
         val font: Typeface = Typeface.createFromAsset(context.assets, SdkPreferencesManager(context).getAppFont())
