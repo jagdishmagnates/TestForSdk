@@ -1,4 +1,4 @@
-package corechat.com.corechatdemo.custom_views
+package corechat.com.chatenginesdklibrary
 
 import android.content.Context
 import android.util.AttributeSet

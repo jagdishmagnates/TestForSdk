@@ -1,8 +1,7 @@
-package corechat.com.chatenginesdklibrary.Utils
+package corechat.com.chatenginesdklibrary
 
 import android.content.Context
 import android.content.SharedPreferences
-import corechat.com.chatenginesdklibrary.R
 
 class SdkPreferencesManager(context: Context) {
 
@@ -30,37 +29,37 @@ class SdkPreferencesManager(context: Context) {
     val APP_FONT_PATH = "app_font_path"
     val APP_BG_DRAWABLE = "app_bg_drawable"
 
-    val appThemesPrefs : SharedPreferences = context.getSharedPreferences(APP_THEMES,MODE_PRIVATE)
-    val editor : SharedPreferences.Editor = appThemesPrefs.edit()
+    val appThemesPrefs: SharedPreferences = context.getSharedPreferences(APP_THEMES, MODE_PRIVATE)
+    val editor: SharedPreferences.Editor = appThemesPrefs.edit()
 
     init {
-        editor.putString(ROBOTO_LIGHT_FONT,ROBOTO_LIGHT)
-        editor.putString(ROBOTO_MEDIUM_FONT,ROBOTO_MEDIUM)
-        editor.putString(ROBOTO_REGULAR_FONT,ROBOTO_REGULAR)
+        editor.putString(ROBOTO_LIGHT_FONT, ROBOTO_LIGHT)
+        editor.putString(ROBOTO_MEDIUM_FONT, ROBOTO_MEDIUM)
+        editor.putString(ROBOTO_REGULAR_FONT, ROBOTO_REGULAR)
 
-        editor.putInt(SEMI_ROUND_DRAWABLE,SEMI_ROUND)
-        editor.putInt(ROUNDED_RECT_DRAWABLE,ROUNDED_RECT)
-        editor.putInt(OVAL_DRAWABLE,OVAL)
+        editor.putInt(SEMI_ROUND_DRAWABLE, SEMI_ROUND)
+        editor.putInt(ROUNDED_RECT_DRAWABLE, ROUNDED_RECT)
+        editor.putInt(OVAL_DRAWABLE, OVAL)
 
         editor.commit()
     }
 
-    fun setAppFont(font : String){
-        editor.putString(APP_FONT_PATH,font)
+    fun setAppFont(font: String) {
+        editor.putString(APP_FONT_PATH, font)
         editor.commit()
     }
 
-    fun getAppFont() : String{
-        return appThemesPrefs.getString(APP_FONT_PATH,FONT_PATH)
+    fun getAppFont(): String {
+        return appThemesPrefs.getString(APP_FONT_PATH, FONT_PATH)
     }
 
-    fun setBgDrawable(drawable : Int){
-        editor.putInt(APP_BG_DRAWABLE,drawable)
+    fun setBgDrawable(drawable: Int) {
+        editor.putInt(APP_BG_DRAWABLE, drawable)
         editor.commit()
     }
 
     fun getBgDrawable(): Int {
-        return appThemesPrefs.getInt(APP_BG_DRAWABLE,CC_CustomButtonBG)
+        return appThemesPrefs.getInt(APP_BG_DRAWABLE, CC_CustomButtonBG)
     }
 
 }
